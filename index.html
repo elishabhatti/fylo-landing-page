@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Fylo landing page with two column layout</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Big+Shoulders+Display:wght@100..900&family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:wght@100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Kumbh+Sans:wght@100..900&family=League+Spartan:wght@100..900&family=Lexend+Deca:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Young+Serif&display=swap"
+    rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Raleway';
+      background-image: url(/images/bg-curve-desktop.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .container {
+      width: 100%;
+    }
+    .main-1 {
+      padding: 50px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .illus-1 {
+      width: 100%;
+    }
+    .header {
+      display: flex;
+      padding: 50px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    a {
+      text-decoration: none;
+      color: #000;
+      margin: 15px;
+    }
+
+    .search {
+      width: 250px;
+      padding: 15px;
+      border-radius: 5px;
+      position: relative;
+      color: hsl(0, 0%, 75%);
+      border: 1px solid gray;
+    }
+
+    h1,
+    p {
+      margin-bottom: 20px;
+      color: hsl(243, 87%, 12%);
+      margin-top: 20px;
+    }
+
+    .btn {
+      width: 200px;
+      margin-top: 20px;
+      border-radius: 5px;
+      padding: 15px;
+      border: none;
+      color: white;
+      background-color: hsl(224, 93%, 58%);
+    }
+
+    .ho {
+      color: hsl(170, 45%, 43%);
+    }
+
+    .pro {
+      border-radius: 50%;
+      width: 50px;
+      margin-right: 40px;
+    }
+
+    .card {
+      width: 400px;
+      border-radius: 20px;
+      border: none;
+      margin-top: 20px;
+      background-color: white;
+      box-shadow: 5px 5px 5px 5px rgb(109, 106, 106);
+      padding: 20px;
+    }
+
+    .about {
+      display: flex;
+    }
+
+
+    li {
+      list-style: none;
+    }
+
+    .button {
+      width: 240px;
+      padding: 15px;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      background-color: hsl(224, 93%, 58%);
+    }
+
+    .searchh {
+      width: 280px;
+      padding: 15px;
+      border: none;
+      color: hsl(0, 0%, 75%);
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+
+    .footer {
+      padding: 50px;
+      background-color: hsl(243, 87%, 12%);
+    }
+
+    .icons {
+      width: 50px;
+      background-color: transparent;
+      border: 1px solid white;
+      color: white;
+      margin: 10px;
+      font-size: 20px;
+      padding: 10px;
+      border-radius: 100%;
+    }
+
+    .icons:hover {
+      color: hsl(224, 93%, 58%);
+      transition: all 0.35s;
+      border-color: hsl(224, 93%, 58%);
+    }
+    .p {
+      color: white;
+    }
+
+    .p:hover {
+      color: hsl(224, 93%, 58%);
+      transition: all 0.35s;
+    }
+    footer {
+      display: flex;
+      justify-content: space-between;
+    }
+    .main-3 {
+      padding: 50px;
+      justify-content: space-between;
+      display: flex;
+      width: 100%;
+      background-color: hsl(238, 22%, 44%);
+    }
+    @media (max-width:985px) {
+      .main-1 {
+        flex-direction: column-reverse;
+        padding: 20px;
+      }
+      h1, p {
+        text-align: center;
+      }
+      .header {
+        padding: 20px;
+      }
+      .main-3 {
+        padding: 20px;
+        flex-direction: column;
+      }
+    }
+    @media (max-width:748px) {
+      footer {
+        flex-direction: column;
+      }
+      .btn, .button, .searchh, .search {
+          width: 100%;
+      }
+      .card {
+          margin: 20px 20px;
+          width: 100%;
+       }
+       a {
+        margin: 6px;
+        font-size: 12px;
+       }
+       .illu {
+        width: 70%;
+       }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="head-1">
+        <img class="illu" src="./images/logo.svg" alt="">
+      </div>
+      <div class="head-2">
+        <a href="">Features</a>
+        <a href="">Team</a>
+        <a href="">Sign In</a>
+      </div>
+    </div>
+    <div class="main-1">
+      <div class="col-1">
+        <h1>All your files in one secure location, accessible anywhere.</h1>
+        <p>Fylo stores your most important files in one secure location.
+          Access them wherever you need, share and collaborate with friends,
+          family, and co-workers.</p>
+        <form method="post" class="in-btn">
+          <div class="txt_field">
+              <input class="search" type="text" required placeholder="Enter Your Email">
+          </div>
+          <input class="btn" type="submit" value="Get Started">
+      </form>
+      </div>
+      <div class="col-2">
+        <img class="illus-1" src="./images/illustration-1.svg" alt="">
+      </div>
+    </div>
+    <div class="main-1">
+      <div class="col-1">
+        <h1>Stay productive, wherever you are</h1>
+        <p>Never let location be an issue when accessing your files. Fylo has you
+          covered for all of your file storage needs.</p>
+        <p>Securely share files and folders with friends, family and colleagues for
+          live collaboration. No email attachments required!</p>
+        <span>
+          <a class="ho" href="">See how Flyo works</a>
+          <img src="./images/icon-arrow.svg" alt="">
+        </span>
+        <div class="card">
+          <img src="./images/icon-quotes.svg" alt="">
+          <p>Fylo has improved our team productivity by an order of magnitude. Since
+            making the switch our team has become a well-oiled collaboration machine.</p>
+          <div class="about">
+            <div class="about-1">
+              <img class="pro" src="./images/avatar-testimonial.jpg" alt="">
+            </div>
+            <div class="about-2">
+              <h5>Kyle Burton</h5>
+              <h5>Founder & CEO, Huddle</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-2">
+        <img class="illus-1" src="./images/illustration-2.svg" alt="">
+      </div>
+    </div>
+    <div class="main-3">
+      <div class="col-1">
+        <h1>Get early access today</h1>
+        <p>It only takes a minute to sign up and our free starter tier is extremely generous. If you have any questions,
+          our support team would be happy to help you.</p>
+      </div>
+      <div class="col-2">
+        <form method="post" class="in-btn">
+          <div class="txt_field">
+              <input class="searchh" type="text" required placeholder="email@example.com">
+          </div>
+          <input class="button" type="submit" value="Get Started For Free">
+      </form>
+      </div>
+    </div>
+<div class="footer">
+  <img src="./images/logo.svg" alt="">
+  <footer>
+    <div class="p-1">
+      <p class="p">Phone: +1-543-123-4567</p>
+      <p class="p">example@fylo.com</p>
+    </div>
+    <div class="p-2">
+      <p class="p">About Us</p>
+      <p class="p">Jobs</p>
+      <p class="p">Press</p>
+      <p class="p">Blog</p>
+    </div>
+    <div class="p-3">
+      <p class="p">Contact Us</p>
+      <p class="p">Terms</p>
+      <p class="p">Privacy</p>
+    </div>
+    <div class="p-4">
+      <button class="icons"><ion-icon name="logo-facebook"></ion-icon></button>
+      <button class="icons"><ion-icon name="logo-twitter"></ion-icon></button>
+      <button class="icons"><ion-icon name="logo-instagram"></ion-icon></button>
+    </div>
+  </footer>
+</div>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
